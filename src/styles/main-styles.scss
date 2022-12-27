@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap");
+$fontFamily: "Roboto", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap");
+$fontFamily2: "Frank Ruhl Libre", sans-serif;
+$main-color: black;
+$second-color: #516f8c;
+$third-color: #2cf2ed;
+$fourth-color: #bf1a0f;
+*,
+body,
+html {
+	font-size: 16px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: $fontFamily2;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+	html {
+		font-size: 12px;
+	}
+}
+@media (min-width: 481px) and (max-width: 767px) {
+	html {
+		font-size: 10px;
+	}
+}
+@media (max-width: 480px) {
+	html {
+		font-size: 8px;
+	}
+}
