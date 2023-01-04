@@ -1,91 +1,91 @@
 $cubicWidth: 28%;
 $cubicHeigth: 15%;
 @mixin topLeft {
-	left: 4%;
-	top: 8%;
-	background-color: rgb(255, 255, 255);
-	box-shadow: 5px 5px 5px rgb(0, 0, 0), -5px -5px 5px rgb(0, 0, 0);
+  left: 4%;
+  top: 8%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 5px rgb(0, 0, 0), -5px -5px 5px rgb(0, 0, 0);
 }
 @mixin topRight {
-	left: calc(100% - #{$cubicWidth} - 4%);
-	top: 8%;
-	background-color: rgb(0, 0, 0);
-	box-shadow: 5px 5px 5px rgb(253, 253, 238), -5px -5px 5px rgb(253, 253, 238);
+  left: calc(100% - #{$cubicWidth} - 4%);
+  top: 8%;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(253, 253, 238), -5px -5px 5px rgb(253, 253, 238);
 }
 @mixin bottomRight {
-	left: calc(100% - #{$cubicWidth} - 4%);
-	top: calc(100% - #{$cubicHeigth} - 8%);
-	background-color: rgb(255, 255, 255);
-	box-shadow: 5px 5px 5px rgb(0, 0, 0), -5px -5px 5px rgb(0, 0, 0);
+  left: calc(100% - #{$cubicWidth} - 4%);
+  top: calc(100% - #{$cubicHeigth} - 8%);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 5px rgb(0, 0, 0), -5px -5px 5px rgb(0, 0, 0);
 }
 @mixin bottomLeft {
-	left: 4%;
-	top: calc(100% - #{$cubicHeigth} - 8%);
-	background-color: rgb(0, 0, 0);
-	box-shadow: 5px 5px 5px rgb(253, 253, 238), -5px -5px 5px rgb(253, 253, 238);
+  left: 4%;
+  top: calc(100% - #{$cubicHeigth} - 8%);
+  background-color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(253, 253, 238), -5px -5px 5px rgb(253, 253, 238);
 }
 .topic-content-visible {
-	position: relative;
-	height: 100%;
+  position: relative;
+  height: 100%;
 }
 .cubic {
-	width: $cubicWidth;
-	height: $cubicHeigth;
-	position: absolute;
-	display: none;
-	z-index: 0;
-	border-top-right-radius: 50px;
-	border-bottom-left-radius: 50px;
+  width: $cubicWidth;
+  height: $cubicHeigth;
+  position: absolute;
+  display: none;
+  z-index: 0;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 .cubic-visible {
-	display: block;
+  display: block;
 }
 
 .cubic-text {
-	margin: auto;
-	font-family: $fontFamily2;
-	font-size: 0.8rem;
+  margin: auto;
+  font-family: $fontFamily2;
+  font-size: 0.8rem;
 }
 .cubic-one {
-	animation: slideCube infinite 5s;
+  animation: slideCube infinite 5s;
 }
 .cubic-two {
-	animation: slideCube2 infinite 5s;
+  animation: slideCube2 infinite 5s;
 }
 
 @keyframes slideCube {
-	0% {
-		@include topLeft();
-	}
-	25% {
-		@include topRight();
-	}
-	50% {
-		@include bottomRight();
-	}
-	75% {
-		@include bottomLeft();
-	}
-	100% {
-		@include topLeft();
-	}
+  0% {
+    @include topLeft();
+  }
+  25% {
+    @include topRight();
+  }
+  50% {
+    @include bottomRight();
+  }
+  75% {
+    @include bottomLeft();
+  }
+  100% {
+    @include topLeft();
+  }
 }
 @keyframes slideCube2 {
-	0% {
-		@include bottomRight();
-	}
+  0% {
+    @include bottomRight();
+  }
 
-	25% {
-		@include bottomLeft();
-	}
+  25% {
+    @include bottomLeft();
+  }
 
-	50% {
-		@include topLeft();
-	}
-	75% {
-		@include topRight();
-	}
-	100% {
-		@include bottomRight();
-	}
+  50% {
+    @include topLeft();
+  }
+  75% {
+    @include topRight();
+  }
+  100% {
+    @include bottomRight();
+  }
 }
