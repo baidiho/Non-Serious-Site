@@ -91,6 +91,7 @@ section:nth-child(odd) .topic-wrapper {
   }
   to {
     opacity: 0;
-    display: none;
+    display: hide;
+		z-index: 0;
   }
 }

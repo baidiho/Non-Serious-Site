@@ -1,0 +1,9 @@
+.topic-content-visible-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+.grid-item {
+  border: 2px solid;
+}
