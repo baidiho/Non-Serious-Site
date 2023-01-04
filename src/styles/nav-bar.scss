@@ -14,7 +14,7 @@ $marginCentr: auto 5px;
 	position: sticky;
 	top: 0px;
 	background-color: $main-color;
-	z-index: 1;
+	z-index: 10000;
 	height: 60px;
 	@include fontMix;
 	& .nav-logo {

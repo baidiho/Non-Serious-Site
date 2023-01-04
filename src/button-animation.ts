@@ -1,9 +1,18 @@
-let button: any = document.querySelector(".topic-demonstration-button");
+let button: any = document.querySelectorAll(".topic-demonstration-button");
+let cubic = document.querySelectorAll(".cubic");
 function animationButton(e: any): void {
-	let parent = e.target.parentNode;
-	parent.classList.add("hiding");
-
-	button.style.display = "none";
+  let parent = e.target.parentNode;
+  parent.classList.add("hiding");
+  e.target.style.display = "none";
+  e.target.removeEventListener("click", animationButton);
+  parent.onanimationend = () => {
+    cubic.forEach((element) => {
+      element.classList.add("cubic-visible");
+    });
+  };
 }
-button.addEventListener("click", animationButton, true);
+console.log(button);
+button.forEach((element: any) => {
+  element.addEventListener("click", animationButton, true);
+});
 console.log(document.querySelectorAll(".topic-wrapper"));
