@@ -1,3 +1,4 @@
+export {};
 let button: any = document.querySelectorAll(".topic-demonstration-button");
 let cubic = document.querySelectorAll(".cubic");
 function animationButton(e: any): void {
@@ -11,8 +12,7 @@ function animationButton(e: any): void {
     });
   };
 }
-console.log(button);
+
 button.forEach((element: any) => {
   element.addEventListener("click", animationButton, true);
 });
-console.log(document.querySelectorAll(".topic-wrapper"));

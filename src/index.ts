@@ -1,5 +1,6 @@
 import "./styles/style.scss";
-import "./button-animation";
+import "./buttonAnimation";
 import typewriter from "./typeWritter";
 import "./intersection";
+import "./dragScript";
 window.addEventListener("load", typewriter);
