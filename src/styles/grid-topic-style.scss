@@ -2,12 +2,25 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 10px;
-  padding: 10px;
+  grid-gap: 20px;
+  padding: 20px;
 }
 .grid-item {
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+  display: flex;
+  // border-top-right-radius: 50px;
+  // border-bottom-left-radius: 50px;
   background-color: rgba(24, 236, 201, 0.568);
   box-shadow: 5px 5px 5px rgb(0, 0, 0), -5px -5px 5px rgb(0, 0, 0);
+  div {
+    text-align: center;
+    margin: auto;
+    font-size: 1.4rem;
+    pointer-events: none;
+  }
+}
+.grid-item-over {
+  border: dotted;
+}
+.grid-item-drag {
+  opacity: 0.5;
 }
