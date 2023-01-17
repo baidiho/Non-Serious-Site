@@ -1,27 +1,32 @@
+.topic-content-forms {
+	// display: flex;
+	// flex-direction: column;
+	// text-align: center;
+	font-size: 1.5rem;
+	text-align: center;
+}
 .topic-form {
-  height: 100%;
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
+	margin-top: 50px;
 }
 form {
-  margin: auto;
+	label {
+		// position: relative;
+		// &::before {
+		//   content: "asdasdas";
 
-  label {
-    // position: relative;
-    // &::before {
-    //   content: "asdasdas";
+		//   position: absolute;
+		//   top: 50px;
 
-    //   position: absolute;
-    //   top: 50px;
-
-    display: block;
-    font-size: 1.5rem;
-    padding: 5px 0;
-  }
-  input {
-  }
-  .storage-info {
-    display: none;
-  }
+		display: block;
+		// font-size: 1.5rem;
+		padding: 5px 0;
+	}
+}
+.storage-info {
+	display: none;
+}
+.storage-info-visible {
+	margin: auto;
+	margin-top: 10px;
+	display: block;
 }
