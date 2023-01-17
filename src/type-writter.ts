@@ -11,7 +11,7 @@ export default function typewriterScript() {
 		} else {
 			elementText.innerHTML = `${mockText.slice(0, i)}|`;
 			i++;
-			return setTimeout(() => recursion(), 12);
+			return setTimeout(() => recursion(), 18);
 		}
 	}
 	recursion();

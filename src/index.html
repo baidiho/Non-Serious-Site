@@ -81,23 +81,23 @@
 		<section id="grid" class="topic-container">
 			<div class="topic-wrapper">
 				<div class="topic-description">
-					<h1>2. Grid.</h1>
+					<h1>2. Grid and Drop.</h1>
 					This is topic is about grid.
 				</div>
 				<div class="topic-content">
 					<div class="topic-content-hide">
 						<button class="topic-demonstration-button">Click</button>
 					</div>
-					<div class="topic-content-visible">
-						<div class="grid-item grid-item-one"></div>
-						<div class="grid-item grid-item-two"></div>
-						<div class="grid-item grid-item-three"></div>
-						<div class="grid-item grid-item-four"></div>
-						<div class="grid-item grid-item-five"></div>
-						<div class="grid-item grid-item-six"></div>
-						<div class="grid-item grid-item-seven"></div>
-						<div class="grid-item grid-item-eight"></div>
-						<div class="grid-item grid-item-nine"></div>
+					<div class="topic-content-visible topic-content-visible-grid">
+						<div class="grid-item grid-item-one" draggable="true"></div>
+						<div class="grid-item grid-item-two" draggable="true"></div>
+						<div class="grid-item grid-item-three" draggable="true"></div>
+						<div class="grid-item grid-item-four" draggable="true"></div>
+						<div class="grid-item grid-item-five" draggable="true"><div>I am grid element that you can move</div></div>
+						<div class="grid-item grid-item-six" draggable="true"></div>
+						<div class="grid-item grid-item-seven" draggable="true"></div>
+						<div class="grid-item grid-item-eight" draggable="true"></div>
+						<div class="grid-item grid-item-nine" draggable="true"></div>
 					</div>
 				</div>
 			</div>
@@ -105,14 +105,28 @@
 		<section id="drag" class="topic-container">
 			<div class="topic-wrapper">
 				<div class="topic-description">
-					<h1>3. Drag and drop.</h1>
+					<h1>3. Forms and Local storage</h1>
 					This topic is about drag and drop.
 				</div>
 				<div class="topic-content">
 					<div class="topic-content-hide">
 						<button class="topic-demonstration-button">Click</button>
 					</div>
-					<div class="topic-content-visible">asdasdasd</div>
+					<div class="topic-content-visible topic-content-forms">
+						<div class="topic-form">
+							<p>Please fill this form</p>
+							<form name="my">
+								<label for="firstname">First Name:<input type="text" name="firstname" required /></label>
+								<label for="lastname">Last Name:<input type="text" name="lastname" required /></label>
+								<button class="submit" type="submit" name="submit">Hey. Maybe you want to push me?</button>
+							</form>
+						</div>
+						<div class="storage-info storage-info-visible">
+							<p data-name="firstname"></p>
+							<p data-name="lastname"></p>
+							<button class="clear">Clear storage</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
