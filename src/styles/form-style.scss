@@ -1,0 +1,27 @@
+.topic-form {
+  height: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+form {
+  margin: auto;
+
+  label {
+    // position: relative;
+    // &::before {
+    //   content: "asdasdas";
+
+    //   position: absolute;
+    //   top: 50px;
+
+    display: block;
+    font-size: 1.5rem;
+    padding: 5px 0;
+  }
+  input {
+  }
+  .storage-info {
+    display: none;
+  }
+}
