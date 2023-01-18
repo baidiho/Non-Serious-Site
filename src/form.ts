@@ -1,6 +1,6 @@
 (function () {
-	const form: any = document.querySelector('form[name="my"]');
 
+  const form: any = document.querySelector('form[name="my"]');
 	const storageWpapper = document.querySelector(".storage-info");
 	const refreshButton = document.querySelector(".clear");
 
@@ -26,6 +26,7 @@
 			refreshButton.addEventListener("click", clearStorage);
 		}
 	}
+  
 	function clearStorage() {
 		window.localStorage.clear();
 		refreshButton.removeEventListener("click", clearStorage);

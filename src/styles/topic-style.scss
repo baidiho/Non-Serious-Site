@@ -1,8 +1,9 @@
 .topic-container {
   width: 100%;
-  margin: 50px 0;
+  margin: 25px 0;
+  padding: 70px;
   height: 80vh;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .topic-wrapper {
@@ -92,6 +93,6 @@ section:nth-child(odd) .topic-wrapper {
   to {
     opacity: 0;
     display: hide;
-		z-index: 0;
+    z-index: 0;
   }
 }
