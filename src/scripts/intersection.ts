@@ -5,7 +5,7 @@ function onLoadObserver(): void {
 	};
 	let statusbarOptions = {
 		// rootMargin: "-50px",
-		threshold: [0.9]
+		threshold: [0.55]
 	};
 	/***************Observer for animated text************** */
 	let animationsCallback = function (entries: any) {
@@ -19,13 +19,12 @@ function onLoadObserver(): void {
 	/************Observer for status bar */
 	let firstIntersect = false;
 	let statusBarCallback = function (entries: any) {
-		if (entries[0].isIntersecting && entries[0].intersectionRatio >= 0.91) {
+		if (entries[0].isIntersecting && entries[0].intersectionRatio >= 0.55) {
 			if (firstIntersect) {
 				document.querySelector(".status-item-active").classList.remove("status-item-active");
 			}
 			let id = entries[0].target.getAttribute("id");
-			console.log(entries[0].target);
-			console.log(entries[0].intersectionRatio);
+
 			// обращаемся к ссылке меню, у которой href равен ID секции
 			document.querySelector(`[href="#${id}"] .status-item-circle`).classList.add("status-item-active");
 			firstIntersect = true;
