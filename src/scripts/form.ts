@@ -42,21 +42,26 @@
 // 	submit: HTMLButtonElement;
 // }
 class StorageHandler {
-	form: any;
-	storageWpapper: any;
-	refreshButton: any;
+	private form: any;
+	private storageWpapper: any;
+	private refreshButton: any;
 
 	constructor() {
 		this.form = document.querySelector('form[name="my"]');
 		this.storageWpapper = document.querySelector(".storage-info");
 		this.refreshButton = document.querySelector(".clear");
+
+		/*bind the context because it lost when adding listener ****************************/
+
+		this.formSumbit = this.formSumbit.bind(this);
+		this.storageHandler = this.storageHandler.bind(this);
+		this.clearStorage = this.clearStorage.bind(this);
+		this.storageHandler = this.storageHandler.bind(this);
 	}
 
 	formSumbit(e: Event) {
 		e.preventDefault();
-		console.log(this.form);
-		Array.from(this.form.elements).forEach((element: any) => {
-			// [...this.form.elements].forEach((element: any) => {
+		[...this.form.elements].forEach((element: any) => {
 			if (element.type == "text") {
 				window.localStorage.setItem(`${element.name}`, `${element.value}`);
 			}
@@ -79,17 +84,15 @@ class StorageHandler {
 
 	clearStorage(): void {
 		window.localStorage.clear();
+
 		this.refreshButton.removeEventListener("click", this.clearStorage);
 		this.storageHandler();
 	}
 
-	onClassInit(): void {
+	onIntsanceInit(): void {
 		this.form.addEventListener("submit", this.formSumbit);
-		console.log(typeof this.form.elements);
-		console.log(this.form.elements);
+		this.storageHandler();
 	}
 }
 const StorageInstance = new StorageHandler();
-StorageInstance.onClassInit();
-// StorageInstance.form.addEventListener("submit", StorageInstance.formSumbit);
-// console.log(StorageInstance.form.elements);
+StorageInstance.onIntsanceInit();
