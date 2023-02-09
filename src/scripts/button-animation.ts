@@ -14,5 +14,5 @@ function animationButton(e: any): void {
 }
 
 button.forEach((element: any) => {
-  element.addEventListener("click", animationButton, true);
+  element.addEventListener("click", animationButton);
 });

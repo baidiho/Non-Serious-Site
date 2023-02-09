@@ -1,70 +1,79 @@
 /* Variables for this element*/
 @mixin fontMix {
-	font-family: $fontFamily;
-	color: #fff;
+  font-family: $fontFamily;
+  color: #fff;
 }
 $fontSize: 1.5rem;
 $marginCentr: auto 5px;
 
 .nav-bar {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	text-align: center;
-	position: sticky;
-	top: 0px;
-	background-color: $main-color;
-	z-index: 10000;
-	height: 60px;
-	@include fontMix;
-	& .nav-logo {
-		margin-left: 10px;
-	}
-	& .nav-list {
-		margin-right: 10px;
-	}
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+  position: sticky;
+  top: 0px;
+  background-color: $main-color;
+  z-index: 10000;
+  height: 60px;
+  @include fontMix;
+  & .nav-logo {
+    margin-left: 10px;
+  }
+  & .nav-list {
+    margin-right: 10px;
+  }
 }
 nav {
-	margin: auto 0px;
+  margin: auto 0px;
 }
 .nav-logo,
 .nav-list {
-	margin: auto;
-	font-size: $fontSize;
-	font-family: inherit;
+  margin: auto;
+  font-size: $fontSize;
+  font-family: inherit;
 }
 
 .nav-item {
-	display: inline-block;
-	margin: 5px;
+  display: inline-block;
+  margin: 5px;
 
-	a {
-		text-decoration: none;
-		@include fontMix;
-		font-size: $fontSize;
-		padding: 5px;
+  a {
+    text-decoration: none;
+    @include fontMix;
+    font-size: $fontSize;
+    padding: 5px;
 
-		&:hover {
-			border: 1.5px #fff;
-			border-radius: 6px;
-			background-color: rgba(255, 255, 255, 0.493);
-		}
-	}
+    &:hover {
+      border: 1.5px #fff;
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.493);
+    }
+  }
 }
 /****************************************Media queries******************************************/
 
-@media (min-width: 768px) and (max-width: 979px) {
-	.nav-bar {
-		background-color: aqua;
-	}
+@media (max-width: 1024px) {
+  .nav-bar {
+    background-color: aqua;
+  }
 }
-@media (min-width: 481px) and (max-width: 767px) {
-	.nav-bar {
-		background-color: green;
-	}
+@media (max-width: 979px) {
+  .nav-bar {
+    background-color: rgb(251, 255, 0);
+  }
+}
+@media (max-width: 767) {
+  .nav-bar {
+    background-color: green;
+  }
 }
 @media (max-width: 480px) {
-	.nav-bar {
-		background-color: red;
-	}
+  .nav-bar {
+    background-color: red;
+  }
 }
+// для смартфонов — 320 px, 480 px и выше;
+// для планшетов — 768 px и выше;
+// для нетбуков — 1024 px и выше;
+// для мониторов — 1280 px, 1600 px, 1920 px и выше.
