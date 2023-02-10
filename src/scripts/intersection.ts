@@ -1,5 +1,5 @@
 export default function onLoadObserver(): void {
-	// setup
+	
 	let animationOptions = {
 		threshold: [0.25]
 	};
@@ -43,4 +43,4 @@ export default function onLoadObserver(): void {
 		statusBarObserver.observe(element);
 	});
 }
-// window.addEventListener("load", () => onLoadObserver());
+

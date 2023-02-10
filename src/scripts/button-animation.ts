@@ -1,18 +1,17 @@
-export {};
-let button: any = document.querySelectorAll(".topic-demonstration-button");
-let cubic = document.querySelectorAll(".cubic");
-function animationButton(e: any): void {
-  let parent = e.target.parentNode;
-  parent.classList.add("hiding");
-  e.target.style.display = "none";
+let button: NodeListOf<Element> = document.querySelectorAll(".topic-button");
+let cubic: NodeListOf<Element> = document.querySelectorAll(".cubic");
+function animationButton(e: PointerEvent): void {
+  let parent = (e.target as Element).parentNode as HTMLElement;
+  parent.classList.add("facade-removing");
   e.target.removeEventListener("click", animationButton);
   parent.onanimationend = () => {
     cubic.forEach((element) => {
       element.classList.add("cubic-visible");
+      parent.remove();
     });
   };
 }
 
-button.forEach((element: any) => {
+button.forEach((element: Element) => {
   element.addEventListener("click", animationButton);
 });
