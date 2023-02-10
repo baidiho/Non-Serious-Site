@@ -1,0 +1,19 @@
+.up-button {
+  position: fixed;
+  top: 90%;
+  left: 95%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 8px;
+  a {
+    margin: 0 auto;
+    color: black;
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+}

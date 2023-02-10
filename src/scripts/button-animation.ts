@@ -1,9 +1,11 @@
 let button: NodeListOf<Element> = document.querySelectorAll(".topic-button");
 let cubic: NodeListOf<Element> = document.querySelectorAll(".cubic");
 function animationButton(e: PointerEvent): void {
-  let parent = (e.target as Element).parentNode as HTMLElement;
+  let clickTarget = e.target as Element;
+  let parent = clickTarget.parentNode as HTMLElement;
   parent.classList.add("facade-removing");
-  e.target.removeEventListener("click", animationButton);
+  clickTarget.removeEventListener("click", animationButton);
+  clickTarget.remove();
   parent.onanimationend = () => {
     cubic.forEach((element) => {
       element.classList.add("cubic-visible");
