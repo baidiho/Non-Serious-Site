@@ -15,14 +15,14 @@ module.exports = {
 				use: [MiniCssExtractPlugin.loader, "css-loader"]
 			},
 
-			{ test: /\.([cm]?ts|tsx)$/, loader: "ts-loader", exclude: /node_modules/ },
+			// { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader", exclude: /node_modules/ },
 
 			{
 				test: /\.s[ac]ss$/,
 				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
 			},
 			{
-				test: /\.m?js$/,
+				test: /\.m?ts$/,
 				exclude: /node_modules/,
 				use: {
 					loader: "babel-loader",

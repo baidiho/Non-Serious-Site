@@ -1,7 +1,10 @@
 import "./styles/style.scss";
-import "./button-animation";
-import typewriter from "./type-writter";
-import "./intersection";
-import "./drag-script";
-import "./form";
-window.addEventListener("load", typewriter);
+import "./scripts/button-animation";
+import typewriter from "./scripts/type-writter";
+import observer from "./scripts/intersection";
+import "./scripts/drag-script";
+import "./scripts/form";
+window.addEventListener("load", () => {
+	typewriter();
+	observer();
+});
