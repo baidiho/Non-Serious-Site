@@ -10,8 +10,6 @@
 	margin-bottom: 50px;
 }
 .text-wrapper {
-	// margin: auto;
-	// padding: 50px 0px;
 	width: 60%;
 	height: 25%;
 
@@ -20,12 +18,9 @@
 		text-align: start;
 		font-size: 2rem;
 		line-height: 2.5rem;
-		color: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
 	}
-	// p:first-of-type {
-	// 	display: block;
-	// 	height: 100%;
-	// }
+	
 }
 @media (min-width: 768px) and (max-width: 979px) {
 	.greeting-container {
