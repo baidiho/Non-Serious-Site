@@ -66,18 +66,37 @@
 
 @media (min-width: 768px) and (max-width: 979px) {
 }
+// @media (max-width: 767px) {
+//   .status-item-circle {
+//     width: 10px;
+//     height: 10px;
+//     border: 1px solid grey;
+//     border-radius: 10px;
+//   }
+//   .status-link {
+//     &:hover {
+//       .status-item-description {
+//         display: none;
+//       }
+//     }
+//   }
+// }
+/*Tablets*/
 @media (max-width: 767px) {
-  .status-item-circle {
-    width: 10px;
-    height: 10px;
-    border: 1px solid grey;
-    border-radius: 10px;
-  }
   .status-link {
     &:hover {
       .status-item-description {
         display: none;
       }
     }
+    .status-item-circle {
+      width: 10px;
+      height: 10px;
+      border: 1px solid grey;
+      border-radius: 10px;
+    }
   }
+}
+/*Laptops*/
+@media (min-width: 768px) {
 }

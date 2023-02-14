@@ -51,29 +51,60 @@ nav {
     }
   }
 }
-/****************************************Media queries******************************************/
 
-@media (max-width: 1024px) {
+/*Tablets*/
+@media (max-width: 767px) {
   .nav-bar {
     background-color: aqua;
   }
 }
-@media (max-width: 979px) {
+/*Laptops*/
+@media (min-width: 768px) {
   .nav-bar {
-    background-color: rgb(251, 255, 0);
-  }
-}
-@media (max-width: 767) {
-  .nav-bar {
-    background-color: green;
-  }
-}
-@media (max-width: 480px) {
-  .nav-bar {
-    background-color: red;
+    background-color: $main-color;
   }
 }
 // для смартфонов — 320 px, 480 px и выше;
 // для планшетов — 768 px и выше;
 // для нетбуков — 1024 px и выше;
 // для мониторов — 1280 px, 1600 px, 1920 px и выше.
+/*burger menu*/
+.burger-menu {
+  width: 40px;
+  height: 100%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+
+  position: relative;
+
+  & div {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    border: 1px solid #fff;
+    width: 25px;
+    height: 2px;
+    transition: transform 2s;
+  }
+
+  div:nth-child(2) {
+    top: calc(50% - 5px);
+  }
+  div:nth-child(3) {
+    top: calc(50% + 5px);
+  }
+  &:hover {
+    div:nth-child(2) {
+      display: none;
+    }
+    div:nth-child(1) {
+      // top: 50%;
+      transform: translate(-50%, 0%) rotate(-45deg);
+    }
+    div:nth-child(3) {
+      // top: 50%;
+      transform: translate(-50%, 0%) rotate(45deg);
+    }
+  }
+}

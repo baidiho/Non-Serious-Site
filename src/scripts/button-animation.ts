@@ -9,8 +9,8 @@ function animationButton(e: PointerEvent): void {
   parent.onanimationend = () => {
     cubic.forEach((element) => {
       element.classList.add("cubic-visible");
-      parent.remove();
     });
+    parent.remove();
   };
 }
 

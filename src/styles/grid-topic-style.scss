@@ -1,6 +1,5 @@
 .topic-grid {
   height: 100%;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -11,7 +10,7 @@
   display: flex;
   // border-top-right-radius: 50px;
   // border-bottom-left-radius: 50px;
-  background-color: rgba(24, 236, 201, 0.568);
+  background-color: rgba(190, 243, 234, 0.568);
   box-shadow: 5px 5px 5px rgb(0, 0, 0), -5px -5px 5px rgb(0, 0, 0);
   div {
     text-align: center;
@@ -24,5 +23,6 @@
   border: dotted;
 }
 .grid-item-drag {
+  background-color: rgba(89, 233, 209, 0.568);
   opacity: 0.5;
 }
