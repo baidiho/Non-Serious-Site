@@ -1,160 +1,155 @@
 @mixin fontMix {
-	font-family: $fontFamily;
-	color: #fff;
+  font-family: $fontFamily;
+  color: #fff;
 }
 $fontSize: 1.5rem;
 $marginCentr: auto 5px;
 
 /*Tablets*/
 @media (max-width: 767px) {
-	.nav-bar {
-		padding: 0px;
-		transition: height 0.5s;
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		position: sticky;
-		top: 0px;
-		background-color: $main-color;
-		z-index: 10000;
-		height: 60px;
-		@include fontMix;
-		& .nav-logo {
-			margin-left: 10px;
-		}
-		& .nav-list {
-			margin-right: 10px;
-		}
-	}
-	.nav-logo {
-		margin: auto 5px;
-		font-size: $fontSize;
-		font-family: inherit;
-	}
-	.nav-list {
-		display: none;
-		.nav-item {
-			display: inline-block;
-			margin: 5px;
+  .nav-bar {
+    transition: height 0.3s;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: sticky;
+    top: 0%;
+    background-color: $main-color;
+    z-index: 10000;
 
-			a {
-				text-decoration: none;
-				@include fontMix;
-				font-size: $fontSize;
-				padding: 5px;
-			}
-		}
-	}
-	/*Nav bar when burger button is pressed*/
-	.active {
-		height: 100vh;
-		z-index: 10000;
-		display: block;
-		.nav-logo {
-			display: none;
-		}
-		.nav-list {
-			width: 160px;
-			height: 180px;
-			position: absolute;
-			top: calc(50% - 90px);
-			left: calc(50% - 80px);
-			margin: 0 auto;
-			display: flex;
-			flex-direction: column;
-			a {
-				font-size: 40px;
-			}
-		}
-	}
+    @include fontMix;
+    & .nav-logo {
+      margin-left: 10px;
+      margin: auto 5px;
+      font-size: $fontSize;
+      font-family: inherit;
+    }
+  }
+  .close {
+    position: sticky;
+    height: 60px;
+  }
 
-	/* All that concern burger menu***************************/
-	.burger-menu {
-		width: 40px;
-		height: 100%;
+  .nav-list {
+    display: none;
+    margin-right: 10px;
+    .nav-item {
+      display: inline-block;
+      margin: 5px;
 
-		position: relative;
-		& div {
-			position: absolute;
-			top: 50%;
-			left: 25%;
-			border: 1px solid #fff;
-			width: 25px;
-			height: 2px;
+      a {
+        text-decoration: none;
+        @include fontMix;
+        font-size: $fontSize;
+        padding: 5px;
+      }
+    }
+  }
+  /*Nav bar when burger button is pressed*/
+  .open {
+    height: 100vh;
 
-			transition: transform 0.8s;
-		}
+    .nav-logo {
+      display: none;
+    }
+    .nav-list {
+      width: 160px;
+      height: 180px;
+      position: absolute;
+      top: calc(50% - 90px);
+      left: calc(50% - 80px);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      a {
+        font-size: 40px;
+      }
+    }
+  }
 
-		div:nth-child(2) {
-			top: calc(50% - 5px);
-		}
-		div:nth-child(3) {
-			top: calc(50% + 5px);
-		}
-	}
-	/*Burger button is pressed  */
-	.pressed {
-		position: absolute;
-		top: 0%;
-		left: (calc(100% - 50px));
-		div:nth-child(1) {
-			display: none;
-		}
-		div:nth-child(2) {
-			top: 50%;
-			transform: rotate(-45deg);
-		}
-		div:nth-child(3) {
-			top: 50%;
-			transform: rotate(45deg);
-		}
-	}
+  /* All that concern burger menu***************************/
+  .burger-menu {
+    width: 40px;
+    height: 100%;
+    position: relative;
+    & div {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      border: 1px solid #fff;
+      width: 25px;
+      height: 2px;
+      transition: transform 0.8s;
+      transition: opacity 0.1s;
+    }
+
+    div:nth-child(2) {
+      top: calc(50% - 5px);
+    }
+    div:nth-child(3) {
+      top: calc(50% + 5px);
+    }
+  }
+  /*Burger button is pressed  */
+  .pressed {
+    div:nth-child(1) {
+      opacity: 0;
+    }
+    div:nth-child(2) {
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+    div:nth-child(3) {
+      top: 50%;
+      transform: rotate(45deg);
+    }
+  }
 }
 /*Laptops*/
 @media (min-width: 768px) {
-	.nav-bar {
-		display: flex;
-		width: 100%;
-		justify-content: space-between;
-		text-align: center;
-		position: sticky;
-		top: 0px;
-		background-color: $main-color;
-		z-index: 10000;
-		height: 60px;
-		@include fontMix;
-		& .nav-logo {
-			margin-left: 10px;
-		}
-		& .nav-list {
-			margin-right: 10px;
-		}
-	}
+  .nav-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    position: sticky;
+    top: 0px;
+    background-color: $main-color;
+    z-index: 10000;
+    height: 60px;
+    @include fontMix;
+    & .nav-logo {
+      margin-left: 10px;
+    }
+    & .nav-list {
+      margin-right: 10px;
+    }
+  }
 
-	.nav-logo,
-	.nav-list {
-		margin: auto;
-		font-size: $fontSize;
-		font-family: inherit;
-	}
-	nav {
-		margin: auto 0px;
-	}
-	.nav-item {
-		display: inline-block;
-		margin: 5px;
+  .nav-logo,
+  .nav-list {
+    margin: auto;
+    font-size: $fontSize;
+    font-family: inherit;
+  }
+  nav {
+    margin: auto 0px;
+  }
+  .nav-item {
+    display: inline-block;
+    margin: 5px;
 
-		a {
-			text-decoration: none;
-			@include fontMix;
-			font-size: $fontSize;
-			padding: 5px;
-			margin: auto;
-			&:hover {
-				border: 1.5px #fff;
-				border-radius: 6px;
-				background-color: rgba(255, 255, 255, 0.493);
-			}
-		}
-	}
+    a {
+      text-decoration: none;
+      @include fontMix;
+      font-size: $fontSize;
+      padding: 5px;
+      margin: auto;
+      &:hover {
+        border: 1.5px #fff;
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, 0.493);
+      }
+    }
+  }
 }
