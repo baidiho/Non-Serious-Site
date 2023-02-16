@@ -79,8 +79,7 @@ $marginCentr: auto 5px;
       border: 1px solid #fff;
       width: 25px;
       height: 2px;
-      transition: transform 0.8s;
-      transition: opacity 0.1s;
+      transition: all 0.8s;
     }
 
     div:nth-child(2) {
@@ -103,6 +102,32 @@ $marginCentr: auto 5px;
       top: 50%;
       transform: rotate(45deg);
     }
+  }
+  /*Modal menu try to do***/ ///
+  .modal-menu {
+    visibility: hidden;
+
+    position: sticky;
+    top: 0%;
+    height: 100vh;
+    width: 0%;
+    background-color: black;
+    z-index: 10002;
+    transition: all 0.5s;
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      list-style: none;
+      font-size: $fontSize;
+    }
+  }
+  .modal-open {
+    position: sticky;
+    visibility: visible;
+    width: 80%;
+    color: white;
+    display: block;
   }
 }
 /*Laptops*/
