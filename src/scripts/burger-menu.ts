@@ -31,8 +31,7 @@ class Burger {
     this.burgerButton.addEventListener("click", this.burgerMenuToggle);
     document.addEventListener("click", (e) => {
       if (e.target != this.nav && this.nav.classList.contains("nav-open")) {
-        this.nav.classList.remove("nav-open");
-        this.burgerButton.classList.toggle("pressed");
+        this.burgerMenuToggle(e);
       }
     });
   }
