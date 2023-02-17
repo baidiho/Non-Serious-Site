@@ -13,6 +13,7 @@ export default function onLoadObserver(): void {
 	};
 
 	const animationObserver = new IntersectionObserver(animationsCallback, animationOptions);
+	const observableElement: any = document.querySelectorAll(".topic-description");
 
 	/************Observer for status bar */
 	let firstIntersect = false;
@@ -32,8 +33,6 @@ export default function onLoadObserver(): void {
 	};
 
 	const statusBarObserver = new IntersectionObserver(statusBarCallback, statusbarOptions);
-
-	const observableElement: any = document.querySelectorAll(".topic-description");
 	const observableElementStatus: any = document.querySelectorAll(".topic-container");
 
 	observableElement.forEach((element: any) => {

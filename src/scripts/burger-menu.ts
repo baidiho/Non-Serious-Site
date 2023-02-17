@@ -1,19 +1,3 @@
-// let burgerButton = document.querySelector(".burger-menu");
-// let nav = document.querySelector("nav");
-
-// burgerButton.addEventListener("click", burgerMenuToggle);
-// document.addEventListener("click", (e) => {
-//   if (e.target != nav && nav.classList.contains("nav-open")) {
-//     nav.classList.remove("nav-open");
-//     burgerButton.classList.toggle("pressed");
-//   }
-// });
-// function burgerMenuToggle(e: Event) {
-//   e.stopPropagation();
-//   burgerButton.classList.toggle("pressed");
-//   nav.classList.toggle("nav-open");
-// }
-
 class Burger {
   public burgerButton: Element;
   public nav: Element;

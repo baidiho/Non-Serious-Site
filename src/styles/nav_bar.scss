@@ -15,7 +15,7 @@ $marginCentr: auto 5px;
     top: 0%;
     background-color: $main-color;
     z-index: 10000;
-    height: 60px;
+    height: 40px;
 
     @include fontMix;
     & .nav-logo {
@@ -80,47 +80,6 @@ $marginCentr: auto 5px;
       transform: rotate(45deg);
     }
   }
-  // /*Modal menu ***/ ///
-  // .modal-menu {
-  // 	display: flex;
-  // 	position: fixed;
-  // 	top: 0%;
-  // 	left: -200%;
-  // 	height: 100vh;
-  // 	width: 100%;
-  // 	background-color: black;
-  // 	z-index: 10002;
-  // 	transition: all 0.5s;
-  // 	backdrop-filter: blur(10px);
-  // 	color: white;
-
-  // 	.modal-list-wrap {
-  // 		height: 100%;
-  // 		width: 80%;
-  // 		display: flex;
-  // 		justify-content: flex-start;
-  // 		align-items: center;
-  // 		margin-left: 10px;
-  // 		li {
-  // 			list-style: none;
-  // 			margin: 5px 0px;
-  // 			a {
-  // 				text-decoration: none;
-  // 				@include fontMix;
-  // 				font-size: 3.5rem;
-  // 				padding: 5px;
-  // 				margin: auto;
-  // 			}
-  // 		}
-  // 		li:last-child {
-  // 			margin-bottom: 0px;
-  // 		}
-  // 	}
-  // }
-  // .modal-open {
-  // 	width: 80%;
-  // 	left: 0%;
-  // }
   /*Another one try to do all on list*/
   nav {
     display: flex;
@@ -176,7 +135,7 @@ $marginCentr: auto 5px;
     top: 0px;
     background-color: $main-color;
     z-index: 10000;
-    height: 60px;
+    height: 40px;
     @include fontMix;
     & .nav-logo {
       margin-left: 10px;
