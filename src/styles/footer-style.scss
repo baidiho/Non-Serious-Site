@@ -1,0 +1,19 @@
+footer {
+  width: 100%;
+  background-color: $main-color;
+  height: 40px;
+  color: white;
+  margin-top: 25px;
+}
+/*Tablets*/
+@media (max-width: 767px) {
+  footer {
+    height: 40px;
+  }
+}
+/*Laptops*/
+@media (min-width: 768px) {
+  footer {
+    height: 60px;
+  }
+}
