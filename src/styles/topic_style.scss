@@ -2,10 +2,9 @@
 .topic-container {
   width: 90%;
   max-width: 1400px;
-  margin: 0 auto;
-  padding: 50px;
+  margin: auto;
+  padding-top: 84px;
   height: 70vh;
-  margin-bottom: 50px;
   margin-top: 40px;
   display: flex;
 }
@@ -16,6 +15,7 @@
   font-size: 1.8rem;
   line-height: 2rem;
   margin: 0 auto;
+  padding: 0 5px;
 
   h1 {
     font-size: 1.8rem;

@@ -8,8 +8,6 @@
 }
 .grid-item {
   display: flex;
-
-  background: rgb(255, 255, 255);
   background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(119, 119, 119, 1) 100%);
   box-shadow: 5px 5px 5px rgb(0, 0, 0), -5px -5px 5px rgb(0, 0, 0);
   div {

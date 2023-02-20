@@ -98,7 +98,7 @@ $marginCentr: auto 5px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: start;
       margin-left: 10px;
       .nav-item {
         list-style: none;
@@ -135,7 +135,7 @@ $marginCentr: auto 5px;
     top: 0px;
     background-color: $main-color;
     z-index: 10000;
-    height: 40px;
+    height: 60px;
     @include fontMix;
     & .nav-logo {
       margin-left: 10px;

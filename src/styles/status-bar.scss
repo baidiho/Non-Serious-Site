@@ -4,9 +4,8 @@
 @media (max-width: 767px) {
   .status-bar {
     position: fixed;
-    right: 0;
+    right: 1.5%;
     top: 40vh;
-    margin-right: 1vw;
     font-family: $fontFamily;
   }
   .status-bar-hide {
@@ -47,6 +46,7 @@
     margin-right: 1vw;
     font-family: $fontFamily;
     transition: all 0.5s;
+    z-index: 10003;
   }
   .status-bar-hide {
     opacity: 0;
@@ -65,10 +65,10 @@
     position: relative;
     &:hover {
       .status-item-description {
-        display: inline;
-        animation-name: slide;
-        animation-duration: 0.2s;
-        animation-timing-function: ease-in-out;
+        z-index: 4;
+        visibility: visible;
+        opacity: 1;
+        right: 30px;
       }
       .status-item-circle {
         background-color: grey;
@@ -86,7 +86,6 @@
     background-color: grey;
   }
   .status-item-description {
-    display: none;
     position: absolute;
     right: 30px;
     text-decoration: none;
@@ -96,17 +95,9 @@
     padding: 5px;
     border-radius: 8px;
     text-align: center;
-  }
-
-  @keyframes slide {
-    from {
-      opacity: 0.3;
-      right: 50px;
-    }
-
-    to {
-      opacity: 1;
-      right: 30px;
-    }
+    visibility: hidden;
+    opacity: 0.3;
+    right: 50px;
+    transition: all 0.2s;
   }
 }
