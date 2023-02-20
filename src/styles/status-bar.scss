@@ -9,6 +9,9 @@
     margin-right: 1vw;
     font-family: $fontFamily;
   }
+  .status-bar-hide {
+    display: none;
+  }
   .status-list {
     li {
       margin-bottom: 30px;
@@ -43,6 +46,11 @@
     top: 40vh;
     margin-right: 1vw;
     font-family: $fontFamily;
+    transition: all 0.5s;
+  }
+  .status-bar-hide {
+    opacity: 0;
+    visibility: hidden;
   }
   .status-list {
     li {
