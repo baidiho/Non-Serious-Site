@@ -1,38 +1,37 @@
 .greeting-container {
-  width: 100%;
-  height: 100vh;
-  background: url("../assets/code2.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
+	width: 100%;
+	height: 100vh;
+	background: url("../assets/code2.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .text-wrapper {
-  width: 60%;
-  height: 25%;
-  margin: auto;
+	width: 60%;
+	height: 25%;
+	margin: auto;
 
-  p,
-  h1 {
-    text-align: start;
-    font-size: 2rem;
-    line-height: 2.5rem;
-    color: rgb(0, 0, 0);
-    // background: rgb(255, 255, 255);
-    // background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    // -webkit-background-clip: text;
-    // background-clip: text;
-    // -webkit-text-fill-color: transparent;
-  }
+	p,
+	h1 {
+		text-align: start;
+		font-size: 2rem;
+		line-height: 2.5rem;
+		color: rgb(0, 0, 0);
+		// background: rgb(255, 255, 255);
+		// background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+		// -webkit-background-clip: text;
+		// background-clip: text;
+		// -webkit-text-fill-color: transparent;
+	}
 }
 /*Tablets*/
 @media (max-width: 767px) {
-  .text-wrapper {
-    p,
-    h1 {
-      text-align: center;
-    }
-  }
+	.text-wrapper {
+		p,
+		h1 {
+			text-align: center;
+		}
+	}
 }

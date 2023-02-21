@@ -1,143 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Example Site</title>
-  </head>
-  <body>
-    <header class="nav-bar close">
-      <div class="nav-logo">I am logo</div>
-      <nav>
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#"> Home</a></li>
-          <li class="nav-item"><a href="#">Contact</a></li>
-          <li class="nav-item"><a href="#">Other</a></li>
-        </ul>
-      </nav>
-      <div class="burger-menu">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </header>
-    <div class="status-bar status-bar-hide">
-      <ul class="status-list">
-        <li>
-          <a href="#animations" class="status-link">
-            <div class="status-item-description">1. Animations</div>
-            <div class="status-item-circle"></div>
-          </a>
-        </li>
-        <li>
-          <a href="#grid" class="status-link">
-            <div class="status-item-description">2. Grid and Drop.</div>
-            <div class="status-item-circle"></div>
-          </a>
-        </li>
-        <li>
-          <a href="#forms" class="status-link">
-            <div class="status-item-description">3. Forms and Local storage</div>
-            <div class="status-item-circle"></div>
-          </a>
-        </li>
-        <li>
-          <a href="#async" class="status-link">
-            <div class="status-item-description">4. Async javascript</div>
-            <div class="status-item-circle"></div>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <section class="greeting-container" id="greeting">
-      <div class="text-wrapper">
-        <h1>Let's introduce ourselves</h1>
-        <p></p>
-      </div>
-    </section>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Example Site</title>
+	</head>
+	<body>
+		<header class="nav-bar close">
+			<div class="nav-logo">I am logo</div>
+			<nav>
+				<ul class="nav-list">
+					<li class="nav-item"><a href="#"> Home</a></li>
+					<li class="nav-item"><a href="#">Contact</a></li>
+					<li class="nav-item"><a href="#">Other</a></li>
+				</ul>
+			</nav>
+			<div class="burger-menu">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</header>
+		<div class="status-bar status-bar-hide">
+			<ul class="status-list">
+				<li>
+					<a href="#animations" class="status-link">
+						<div class="status-item-description">1. Animations</div>
+						<div class="status-item-circle"></div>
+					</a>
+				</li>
+				<li>
+					<a href="#grid" class="status-link">
+						<div class="status-item-description">2. Grid and Drop.</div>
+						<div class="status-item-circle"></div>
+					</a>
+				</li>
+				<li>
+					<a href="#forms" class="status-link">
+						<div class="status-item-description">3. Forms and Local storage</div>
+						<div class="status-item-circle"></div>
+					</a>
+				</li>
+				<li>
+					<a href="#async" class="status-link">
+						<div class="status-item-description">4. Async javascript</div>
+						<div class="status-item-circle"></div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<section class="greeting-container" id="greeting">
+			<div class="text-wrapper">
+				<h1>Let's introduce ourselves</h1>
+				<p></p>
+			</div>
+		</section>
 
-    <section id="animations" class="topic-container">
-      <div class="topic-description">
-        <h1>1. Animations.</h1>
-        This is topic for basic animations and etc. And look how cool the text is rising up.
-      </div>
-      <div class="topic-content">
-        <div class="topic-content-facade">
-          <button class="topic-button">Click</button>
-        </div>
-        <div class="topic-content-visible">
-          <div class="cubic cubic-one"></div>
-          <div class="cubic cubic-two"></div>
-        </div>
-      </div>
-    </section>
-    <section id="grid" class="topic-container">
-      <div class="topic-description">
-        <h1>2. Grid and Drop.</h1>
-        This is topic is about grid.
-      </div>
-      <div class="topic-content">
-        <div class="topic-content-facade">
-          <button class="topic-button">Click</button>
-        </div>
-        <div class="topic-content-visible">
-          <div class="topic-grid">
-            <div class="grid-item grid-item-five" draggable="true"><div>First block</div></div>
-            <div class="grid-item grid-item-five" draggable="true"><div>Second block</div></div>
-            <div class="grid-item grid-item-five" draggable="true"><div>Third block</div></div>
-            <div class="grid-item grid-item-five" draggable="true"><div>Fourth block</div></div>
-            <div class="grid-item grid-item-five" draggable="true"><div>Fifth block</div></div>
-            <div class="grid-item grid-item-five" draggable="true"><div>Sixth block</div></div>
-            <div class="grid-item grid-item-five" draggable="true"><div>Seventh block</div></div>
-            <div class="grid-item grid-item-five" draggable="true"><div>Eighth block</div></div>
-            <div class="grid-item grid-item-five" draggable="true"><div>Ninth block</div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="forms" class="topic-container">
-      <div class="topic-description">
-        <h1>3. Forms and Local storage</h1>
-        Here we try to work with forms and local storage for save your name.
-      </div>
-      <div class="topic-content">
-        <div class="topic-content-facade">
-          <button class="topic-button">Click</button>
-        </div>
-        <div class="topic-content-visible topic-content-forms">
-          <div class="topic-form">
-            <p>Please fill this form</p>
-            <form name="my">
-              <label for="firstname">First Name:<input type="text" name="firstname" required /></label>
-              <label for="lastname">Last Name:<input type="text" name="lastname" required /></label>
-              <button class="submit" type="submit" name="submit">Hey. Maybe you want to push me?</button>
-            </form>
-          </div>
-          <div class="storage-info storage-info-visible">
-            <p data-name="firstname"></p>
-            <p data-name="lastname"></p>
-            <button class="clear">Clear storage</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="async" class="topic-container">
-      <div class="topic-description">
-        <h1>4. Async javascript</h1>
-        The cherry on the cake. His majesty asynchronous JS.
-      </div>
-      <div class="topic-content">
-        <div class="topic-content-facade">
-          <button class="topic-button">Click</button>
-        </div>
-        <div class="topic-content-visible"></div>
-      </div>
-    </section>
-    <!-- <div class="up-button up-button-hide"><a href="#greeting">Up</a></div> -->
-    <div class="up-button up-button-hide">
-      <a href="#greeting"><img src="../src/assets/up-button.png" /></a>
-    </div>
-    <footer>I am footer</footer>
-  </body>
+		<section id="animations" class="topic-container">
+			<div class="topic-description">
+				<h1>1. Animations.</h1>
+				This is topic for basic animations and etc. And look how cool the text is rising up.
+			</div>
+			<div class="topic-content">
+				<div class="topic-content-facade">
+					<button class="topic-button">Click</button>
+				</div>
+				<div class="topic-content-visible">
+					<div class="cubic cubic-one"></div>
+					<div class="cubic cubic-two"></div>
+				</div>
+			</div>
+		</section>
+		<section id="grid" class="topic-container">
+			<div class="topic-description">
+				<h1>2. Grid and Drop.</h1>
+				This is topic is about grid.
+			</div>
+			<div class="topic-content">
+				<div class="topic-content-facade">
+					<button class="topic-button">Click</button>
+				</div>
+				<div class="topic-content-visible">
+					<div class="topic-grid">
+						<div class="grid-item grid-item-five" draggable="true"><div>First block</div></div>
+						<div class="grid-item grid-item-five" draggable="true"><div>Second block</div></div>
+						<div class="grid-item grid-item-five" draggable="true"><div>Third block</div></div>
+						<div class="grid-item grid-item-five" draggable="true"><div>Fourth block</div></div>
+						<div class="grid-item grid-item-five" draggable="true"><div>Fifth block</div></div>
+						<div class="grid-item grid-item-five" draggable="true"><div>Sixth block</div></div>
+						<div class="grid-item grid-item-five" draggable="true"><div>Seventh block</div></div>
+						<div class="grid-item grid-item-five" draggable="true"><div>Eighth block</div></div>
+						<div class="grid-item grid-item-five" draggable="true"><div>Ninth block</div></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="forms" class="topic-container">
+			<div class="topic-description">
+				<h1>3. Forms and Local storage</h1>
+				Here we try to work with forms and local storage for save your name.
+			</div>
+			<div class="topic-content">
+				<div class="topic-content-facade">
+					<button class="topic-button">Click</button>
+				</div>
+				<div class="topic-content-visible topic-content-forms">
+					<div class="topic-form">
+						<p>Please fill this form</p>
+						<form name="my">
+							<label for="firstname">First Name:<input class="input" type="text" name="firstname" required /></label>
+							<label for="lastname">Last Name:<input class="input" type="text" name="lastname" required /></label>
+							<button class="submit" type="submit" name="submit">Hey. Maybe you want to push me?</button>
+						</form>
+					</div>
+					<div class="storage-info storage-info-visible">
+						<p data-name="firstname"></p>
+						<p data-name="lastname"></p>
+						<button class="clear">Clear storage</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="async" class="topic-container">
+			<div class="topic-description">
+				<h1>4. Async javascript</h1>
+				The cherry on the cake. His majesty asynchronous JS.
+			</div>
+			<div class="topic-content">
+				<div class="topic-content-facade">
+					<button class="topic-button">Click</button>
+				</div>
+				<div class="topic-content-visible"></div>
+			</div>
+		</section>
+		<div class="up-button up-button-hide">
+			<a href="#greeting"><img src="../src/assets/up-button.png" /></a>
+		</div>
+		<footer class="footer">
+			<div class="footer-text">
+				&copy; All rights not reserved. Come on. If someone want to take part of this site for personal usage, it will
+				be great. "Dumb Site" 2023.
+			</div>
+		</footer>
+	</body>
 </html>

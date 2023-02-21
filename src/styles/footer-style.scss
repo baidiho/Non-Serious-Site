@@ -1,19 +1,27 @@
 footer {
-  width: 100%;
-  background-color: $main-color;
-  height: 40px;
-  color: white;
-  margin-top: 25px;
+	width: 100%;
+	background-color: $main-color;
+	color: white;
+	margin-top: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.footer-text {
+		font-size: 1.1rem;
+	}
 }
 /*Tablets*/
 @media (max-width: 767px) {
-  footer {
-    height: 40px;
-  }
+	.footer {
+		height: 40px;
+		.footer-text {
+			margin: 0 5px;
+		}
+	}
 }
 /*Laptops*/
 @media (min-width: 768px) {
-  footer {
-    height: 60px;
-  }
+	.footer {
+		height: 60px;
+	}
 }

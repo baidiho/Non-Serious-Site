@@ -1,42 +1,42 @@
 /*Main style for both queries*/
 .up-button {
-  position: fixed;
-  transition: all 0.5s;
+	position: fixed;
+	transition: all 0.5s;
 
-  a {
-    margin: 0 auto;
-    color: black;
-    text-decoration: none;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  a:visited {
-    text-decoration: none;
-  }
+	a {
+		margin: 0 auto;
+		color: black;
+		text-decoration: none;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	a:visited {
+		text-decoration: none;
+	}
 }
 .up-button-hide {
-  opacity: 0;
-  visibility: hidden;
+	opacity: 0;
+	visibility: hidden;
 }
 
 /*Tablets*/
 @media (max-width: 767px) {
-  .up-button {
-    bottom: 5%;
-    right: 1.5%;
-    width: 20px;
-    height: 20px;
-  }
+	.up-button {
+		bottom: 8%;
+		right: 1.5%;
+		width: 20px;
+		height: 20px;
+	}
 }
 //Laptops
 @media (min-width: 768px) {
-  .up-button {
-    bottom: 8%;
-    right: 0;
-    width: 50px;
-    height: 50px;
-    margin-right: 1vw;
-  }
+	.up-button {
+		bottom: 8%;
+		right: 2%;
+		width: 50px;
+		height: 50px;
+		margin-right: 1vw;
+	}
 }
