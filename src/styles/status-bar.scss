@@ -1,27 +1,31 @@
-/****************************************Media queries******************************************/
-
+/*Main style for both queries*/
+.status-bar {
+  position: fixed;
+  top: 40vh;
+  font-family: $fontFamily;
+}
+.status-list {
+  li {
+    margin-bottom: 30px;
+    list-style: none;
+  }
+}
+.status-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.status-item-active {
+  background-color: grey;
+}
 /*Tablets*/
 @media (max-width: 767px) {
   .status-bar {
-    position: fixed;
-    right: 1.5%;
-    top: 40vh;
-    font-family: $fontFamily;
+    right: 3%;
   }
   .status-bar-hide {
     display: none;
-  }
-  .status-list {
-    li {
-      margin-bottom: 30px;
-      list-style: none;
-    }
-  }
-  .status-link {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    position: relative;
   }
   .status-item-circle {
     list-style: none;
@@ -30,9 +34,6 @@
     border: 1px solid grey;
     border-radius: 10px;
   }
-  .status-item-active {
-    background-color: grey;
-  }
   .status-item-description {
     display: none;
   }
@@ -40,11 +41,8 @@
 /*Laptops*/
 @media (min-width: 768px) {
   .status-bar {
-    position: fixed;
     right: 0;
-    top: 40vh;
     margin-right: 1vw;
-    font-family: $fontFamily;
     transition: all 0.5s;
     z-index: 10003;
   }
@@ -52,27 +50,15 @@
     opacity: 0;
     visibility: hidden;
   }
-  .status-list {
-    li {
-      margin-bottom: 30px;
-      list-style: none;
+  .status-link:hover {
+    .status-item-description {
+      z-index: 4;
+      visibility: visible;
+      opacity: 1;
+      right: 30px;
     }
-  }
-  .status-link {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    position: relative;
-    &:hover {
-      .status-item-description {
-        z-index: 4;
-        visibility: visible;
-        opacity: 1;
-        right: 30px;
-      }
-      .status-item-circle {
-        background-color: grey;
-      }
+    .status-item-circle {
+      background-color: grey;
     }
   }
   .status-item-circle {
@@ -87,9 +73,9 @@
   }
   .status-item-description {
     position: absolute;
-    right: 30px;
-    text-decoration: none;
+    right: 50px;
     width: 10vw;
+    text-decoration: none;
     background-color: $main-color;
     color: #fff;
     padding: 5px;
@@ -97,7 +83,6 @@
     text-align: center;
     visibility: hidden;
     opacity: 0.3;
-    right: 50px;
     transition: all 0.2s;
   }
 }

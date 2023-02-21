@@ -8,7 +8,7 @@ class Burger {
   }
   burgerMenuToggle(e: Event) {
     e.stopPropagation();
-    this.burgerButton.classList.toggle("pressed");
+    this.burgerButton.classList.toggle("burger-menu-pressed");
     this.nav.classList.toggle("nav-open");
   }
   onInstanceInit() {
