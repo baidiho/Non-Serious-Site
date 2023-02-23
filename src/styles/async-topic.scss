@@ -1,5 +1,11 @@
 .topic-content-async {
-  overflow-y: auto;
+}
+.posts-container {
+  height: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow-y: scroll;
+  border: 2px solid;
 }
 .post {
   margin: 10px;
@@ -13,4 +19,32 @@
     margin: 5px 0;
     font-size: 1rem;
   }
+}
+.page-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-button {
+  width: 20px;
+  height: 20px;
+  font-size: 1rem;
+  text-align: center;
+  background-color: white;
+  margin: 2px;
+  transition: all 0.8s;
+  cursor: pointer;
+  &:hover {
+    background-color: gray;
+  }
+}
+.page-button-active {
+  color: white;
+  background-color: black;
+  &:hover {
+    background-color: rgba(141, 119, 119, 0.295);
+  }
+}
+.request {
+  height: 10%;
 }
