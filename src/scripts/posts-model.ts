@@ -9,4 +9,4 @@ export async function requestToServer(url: URL, options?: Object) {
   }
 }
 
-export async function requestComments() {}
+

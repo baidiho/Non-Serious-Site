@@ -1,7 +1,9 @@
-.topic-content-async {
+.post-working-window {
+  height: 95%;
+  margin: 0px;
 }
 .posts-container {
-  height: 70%;
+  height: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow-y: scroll;
@@ -24,6 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 10%;
 }
 .page-button {
   width: 20px;
@@ -45,6 +48,5 @@
     background-color: rgba(141, 119, 119, 0.295);
   }
 }
-.request {
-  height: 10%;
+.navigation-button {
 }
