@@ -7,6 +7,7 @@ import "./scripts/drag-script";
 import "./scripts/form";
 import "./scripts/status-bar";
 import "./scripts/posts-controller";
+import "./scripts/Singleton";
 
 window.addEventListener("load", () => {
   typewriter();
