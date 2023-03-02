@@ -6,11 +6,10 @@ import observer from "./scripts/intersection";
 import "./scripts/drag-script";
 import "./scripts/form";
 import "./scripts/status-bar";
-import "./scripts/posts-controller";
-import "./scripts/Singleton";
-import "./scripts/post-script";
+// import "./scripts/Singleton";
+import "./scripts/posts-view";
 
 window.addEventListener("load", () => {
-  typewriter();
-  observer();
+	typewriter();
+	observer();
 });
