@@ -1,4 +1,4 @@
-import { Post, Comments } from "./types";
+import { Post, Comments, PostControllerData } from "./types";
 import { switchPages, moveToPost } from "./posts-controller";
 
 function renderSinglePost(post: Post, parentElement: Element, callback?: Function) {
@@ -8,8 +8,7 @@ function renderSinglePost(post: Post, parentElement: Element, callback?: Functio
   postElementDescription.textContent = `Post#${post.id} ${post.title}`;
   let postElementBody = document.createElement("p");
   postElementBody.textContent = post.body;
-  postElement.appendChild(postElementDescription);
-  postElement.appendChild(postElementBody);
+  postElement.append(postElementDescription, postElementBody);
   parentElement.appendChild(postElement);
   if (callback) {
     postElement.addEventListener("click", () => {
@@ -40,31 +39,7 @@ export function renderPosts(
     return postContainer;
   }
 }
-// export function renderPosts(posts: Array<Post> | Post, parentElement: Element, pageNumber: number, postsLimit: number) {
-//   parentElement.replaceChildren(); //
-//   if (Array.isArray(posts)) {
-//     let postContainer = document.createElement("div");
-//     postContainer.classList.add("posts-container");
-//     for (let i = (pageNumber - 1) * postsLimit; i <= pageNumber * postsLimit - 1; i++) {
-//       let postElement = document.createElement("div");
-//       postElement.classList.add("post");
-//       let postElementDescription = document.createElement("h1");
-//       postElementDescription.textContent = `Post#${posts[i].id} ${posts[i].title}`;
-//       let postElementBody = document.createElement("p");
-//       postElementBody.textContent = posts[i].body;
-//       postElement.appendChild(postElementDescription);
-//       postElement.appendChild(postElementBody);
-//       postContainer.appendChild(postElement);
 
-//       postElement.addEventListener("click", () => {
-//         moveToPost(posts[i]);
-//       });
-//     }
-//     parentElement.appendChild(postContainer);
-//   } else {
-//     console.log("I am not array");
-//   }
-// }
 export function renderError(parentElement: Element) {
   parentElement.replaceChildren();
   let errorMessage = document.createElement("p");
@@ -128,4 +103,46 @@ export function renderComments(comments: Array<Comments>, parentElement: Element
       parentElement.appendChild(commentElement);
     }
   }
+}
+/**************************************************************************************** */
+export class PostView {
+  static renderFunctionalButton(typeOfPage: string, options: any) {
+    const button = document.createElement("button");
+    if (typeOfPage == "main") {
+      button.classList.add("navigation-button", "request");
+    } else {
+      button.classList.add("navigation-button", "back");
+    }
+    options.mainContainer.appendChild(button);
+  }
+
+  static renderPosts(options: PostControllerData, callback?: Function) {
+    let postContainer = document.createElement("div");
+    postContainer.classList.add("posts-container");
+    for (
+      let i = (options.lastPageClicked - 1) * options.numberOfPostsOnPage;
+      i <= options.lastPageClicked * options.numberOfPostsOnPage - 1;
+      i++
+    ) {
+      renderSinglePost(options.arrayOfPosts[i], postContainer, callback);
+    }
+    options.mainContainer.appendChild(postContainer);
+  }
+  static renderPageNumberButtons() {}
+  static renderSinglePost(post: Post, parentElement: Element, callback?: Function) {
+    let postElement = document.createElement("div");
+    postElement.classList.add("post");
+    let postElementDescription = document.createElement("h1");
+    postElementDescription.textContent = `Post#${post.id} ${post.title}`;
+    let postElementBody = document.createElement("p");
+    postElementBody.textContent = post.body;
+    postElement.append(postElementDescription, postElementBody, postElement);
+    if (callback) {
+      postElement.addEventListener("click", () => {
+        callback(post);
+      });
+    }
+  }
+  static renderComments() {}
+  static renderError() {}
 }

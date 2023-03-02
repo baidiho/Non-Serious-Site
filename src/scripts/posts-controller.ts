@@ -3,14 +3,14 @@ import { renderError, renderPageButtons, renderPosts, renderPostWithComments, re
 import { Post } from "./types";
 import { PostControllerOptions } from "./types";
 
-/*Variables for for controller work */
-let options: PostControllerOptions = {
-  baseUrl: new URL("https://jsonplaceholder.typicode.com"),
-  postsOnPage: 5,
-  requestButton: document.querySelector(".request"),
-  postContainer: document.querySelector(".post-working-window"),
-  pageButtonsContainer: document.querySelector(".page-button-container"),
-};
+// /*Variables for for controller work */
+// let options: PostControllerOptions = {
+//   baseUrl: new URL("https://jsonplaceholder.typicode.com"),
+//   postsOnPage: 5,
+//   requestButton: document.querySelector(".request"),
+//   postContainer: document.querySelector(".post-working-window"),
+//   pageButtonsContainer: document.querySelector(".page-button-container"),
+// };
 /*first request to server*/
 options.requestButton.addEventListener("click", () => {
   startRequest(options);

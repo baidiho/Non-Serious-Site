@@ -8,6 +8,7 @@ import "./scripts/form";
 import "./scripts/status-bar";
 import "./scripts/posts-controller";
 import "./scripts/Singleton";
+import "./scripts/post-script";
 
 window.addEventListener("load", () => {
   typewriter();
