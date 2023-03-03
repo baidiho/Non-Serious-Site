@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Example Site</title>
+    <meta name="description" content="Portfolio site for educational purposes" />
+    <meta name="author" content="Ihor Baidalov" />
+    <title>Non Serious Site</title>
   </head>
-
   <body>
-    <header class="nav-bar">
+    <header class="nav-bar close">
       <div class="nav-logo">I am logo</div>
-
       <nav>
         <ul class="nav-list">
           <li class="nav-item"><a href="#"> Home</a></li>
@@ -18,8 +18,13 @@
           <li class="nav-item"><a href="#">Other</a></li>
         </ul>
       </nav>
+      <div class="burger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </header>
-    <div class="status-bar">
+    <div class="status-bar status-bar-hide">
       <ul class="status-list">
         <li>
           <a href="#animations" class="status-link">
@@ -47,18 +52,17 @@
         </li>
       </ul>
     </div>
-    <section class="greeting-container summary">
+    <section class="greeting-container" id="greeting">
       <div class="text-wrapper">
         <h1>Let's introduce ourselves</h1>
         <p></p>
       </div>
-      <div class="topic-item"></div>
     </section>
 
     <section id="animations" class="topic-container">
       <div class="topic-description">
         <h1>1. Animations.</h1>
-        This is topic for basic animations and etc. And look how cool the text is rising up.
+        This is topic for basic animations and etc. All styles here and on the site were done with SASS preprocessor.
       </div>
       <div class="topic-content">
         <div class="topic-content-facade">
@@ -73,22 +77,24 @@
     <section id="grid" class="topic-container">
       <div class="topic-description">
         <h1>2. Grid and Drop.</h1>
-        This is topic is about grid.
+        Here yo can see drag and drop elements. Sorry, only for PC.
       </div>
       <div class="topic-content">
         <div class="topic-content-facade">
           <button class="topic-button">Click</button>
         </div>
-        <div class="topic-content-visible topic-content-visible-grid">
-          <div class="grid-item grid-item-one" draggable="true"></div>
-          <div class="grid-item grid-item-two" draggable="true"></div>
-          <div class="grid-item grid-item-three" draggable="true"></div>
-          <div class="grid-item grid-item-four" draggable="true"></div>
-          <div class="grid-item grid-item-five" draggable="true"><div>I am grid element that you can move</div></div>
-          <div class="grid-item grid-item-six" draggable="true"></div>
-          <div class="grid-item grid-item-seven" draggable="true"></div>
-          <div class="grid-item grid-item-eight" draggable="true"></div>
-          <div class="grid-item grid-item-nine" draggable="true"></div>
+        <div class="topic-content-visible">
+          <div class="topic-grid">
+            <div class="grid-item grid-item-five" draggable="true"><div>First block</div></div>
+            <div class="grid-item grid-item-five" draggable="true"><div>Second block</div></div>
+            <div class="grid-item grid-item-five" draggable="true"><div>Third block</div></div>
+            <div class="grid-item grid-item-five" draggable="true"><div>Fourth block</div></div>
+            <div class="grid-item grid-item-five" draggable="true"><div>Fifth block</div></div>
+            <div class="grid-item grid-item-five" draggable="true"><div>Sixth block</div></div>
+            <div class="grid-item grid-item-five" draggable="true"><div>Seventh block</div></div>
+            <div class="grid-item grid-item-five" draggable="true"><div>Eighth block</div></div>
+            <div class="grid-item grid-item-five" draggable="true"><div>Ninth block</div></div>
+          </div>
         </div>
       </div>
     </section>
@@ -98,15 +104,15 @@
         Here we try to work with forms and local storage for save your name.
       </div>
       <div class="topic-content">
-        <div class="topic-content-hide">
-          <button class="topic-demonstration-button">Click</button>
+        <div class="topic-content-facade">
+          <button class="topic-button">Click</button>
         </div>
         <div class="topic-content-visible topic-content-forms">
           <div class="topic-form">
             <p>Please fill this form</p>
             <form name="my">
-              <label for="firstname">First Name:<input type="text" name="firstname" required /></label>
-              <label for="lastname">Last Name:<input type="text" name="lastname" required /></label>
+              <label for="firstname">First Name:<input class="input" type="text" name="firstname" required /></label>
+              <label for="lastname">Last Name:<input class="input" type="text" name="lastname" required /></label>
               <button class="submit" type="submit" name="submit">Hey. Maybe you want to push me?</button>
             </form>
           </div>
@@ -121,14 +127,37 @@
     <section id="async" class="topic-container">
       <div class="topic-description">
         <h1>4. Async javascript</h1>
-        The cherry on the cake. His majesty asynchronous JS.
+        The cherry on the cake. His majesty async JS. I've tried to do it with classes. I`'ve used HTTP request to have
+        got data from JSONPlaceholder.com.
       </div>
-      <div class="topic-content">
-        <div class="topic-content-hide">
-          <button class="topic-demonstration-button">Click</button>
+      <div class="topic-content topic-async">
+        <div class="topic-content-facade">
+          <button class="topic-button">Click</button>
         </div>
-        <div class="topic-content-visible"></div>
+        <div class="topic-content-visible topic-content-async">
+          <button class="navigation-button request">Load posts</button>
+        </div>
       </div>
     </section>
+    <div class="up-button up-button-hide">
+      <a href="#greeting"><img src="../src/assets/up-button.png" /></a>
+    </div>
+    <div class="conclusion">
+      <p>Technologies were used here:</p>
+      <ul>
+        <li><img src="../src/assets/HTML.jpg" alt="HTML Logo" /></li>
+        <li><img src="../src/assets/SASS.jpg" alt="SASS Logo" /></li>
+        <li><img src="../src/assets/JS.jpg" alt="Javascript logo" /></li>
+        <li><img src="../src/assets/TS.png" alt="Typescript logo" /></li>
+        <li><img src="../src/assets/webpack.png" alt="Webpack logo" /></li>
+        <li><img src="../src/assets/Babel.png" alt="Babel logo" /></li>
+      </ul>
+    </div>
+    <footer class="footer">
+      <div class="footer-text">
+        &copy; All rights not reserved. Come on. If someone want to take part of this site for personal usage, it will
+        be great. "Silly Site" 2023.
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,79 +1,142 @@
-/* Variables for this element*/
 @mixin fontMix {
   font-family: $fontFamily;
   color: #fff;
 }
 $fontSize: 1.5rem;
 $marginCentr: auto 5px;
-
+/*Main styles for that fits for all screen*/
 .nav-bar {
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  text-align: center;
+  width: 100%;
   position: sticky;
-  top: 0px;
+  top: 0%;
   background-color: $main-color;
   z-index: 10000;
-  height: 60px;
   @include fontMix;
-  & .nav-logo {
+
+  .nav-logo {
     margin-left: 10px;
+    font-size: $fontSize;
   }
-  & .nav-list {
+  .nav-list {
     margin-right: 10px;
   }
-}
-nav {
-  margin: auto 0px;
-}
-.nav-logo,
-.nav-list {
-  margin: auto;
-  font-size: $fontSize;
-  font-family: inherit;
+  .nav-item {
+    display: inline-block;
+    margin: 5px;
+    a {
+      text-decoration: none;
+      @include fontMix;
+      font-size: $fontSize;
+      padding: 5px;
+    }
+  }
 }
 
-.nav-item {
-  display: inline-block;
-  margin: 5px;
+/*End of common styles*/
+/*Tablets*/
+@media (max-width: 767px) {
+  .nav-bar {
+    height: 40px;
+  }
+  .nav-logo {
+    margin: auto 5px;
+  }
+  /* All that concern burger menu***************************/
+  .burger-menu {
+    width: 40px;
+    height: 100%;
+    position: relative;
+    margin-right: 5px;
+    z-index: 10002;
+    & div {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      border: 1px solid #fff;
+      width: 25px;
+      height: 2px;
+      transition: all 0.8s;
+    }
+    div:nth-child(2) {
+      top: calc(50% - 5px);
+    }
+    div:nth-child(3) {
+      top: calc(50% + 5px);
+    }
+  }
+  /*Burger button pressed  */
+  .burger-menu-pressed {
+    div:nth-child(1) {
+      opacity: 0;
+    }
+    div:nth-child(2) {
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+    div:nth-child(3) {
+      top: 50%;
+      transform: rotate(45deg);
+    }
+  }
+  /*Mobile navigation menu*/
+  nav {
+    display: flex;
+    position: fixed;
+    top: 0%;
+    left: -200%;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    z-index: 10002;
+    transition: all 0.5s;
+    color: white;
 
-  a {
-    text-decoration: none;
-    @include fontMix;
-    font-size: $fontSize;
-    padding: 5px;
-
-    &:hover {
+    .nav-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      margin-left: 10px;
+      .nav-item {
+        list-style: none;
+        margin: 5px 0px;
+        a {
+          text-decoration: none;
+          @include fontMix;
+          font-size: 40px;
+          padding: 5px;
+          margin: auto;
+        }
+      }
+      li:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .nav-open {
+    width: 80%;
+    left: 0%;
+  }
+}
+/*Laptops*/
+@media (min-width: 768px) {
+  .nav-bar {
+    height: 60px;
+  }
+  .nav-logo,
+  .nav-list {
+    margin: auto;
+  }
+  nav {
+    margin: auto 0px;
+  }
+  .nav-item {
+    a:hover {
       border: 1.5px #fff;
       border-radius: 6px;
       background-color: rgba(255, 255, 255, 0.493);
     }
   }
 }
-/****************************************Media queries******************************************/
-
-@media (max-width: 1024px) {
-  .nav-bar {
-    background-color: aqua;
-  }
-}
-@media (max-width: 979px) {
-  .nav-bar {
-    background-color: rgb(251, 255, 0);
-  }
-}
-@media (max-width: 767) {
-  .nav-bar {
-    background-color: green;
-  }
-}
-@media (max-width: 480px) {
-  .nav-bar {
-    background-color: red;
-  }
-}
-// для смартфонов — 320 px, 480 px и выше;
-// для планшетов — 768 px и выше;
-// для нетбуков — 1024 px и выше;
-// для мониторов — 1280 px, 1600 px, 1920 px и выше.

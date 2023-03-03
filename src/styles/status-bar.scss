@@ -1,9 +1,12 @@
+/*Main style for both queries*/
 .status-bar {
   position: fixed;
-  right: 0;
   top: 40vh;
-  margin-right: 1vw;
   font-family: $fontFamily;
+}
+.status-bar-hide {
+  opacity: 0;
+  visibility: hidden;
 }
 .status-list {
   li {
@@ -16,68 +19,79 @@
   display: flex;
   align-items: center;
   position: relative;
-  &:hover {
+}
+.status-item-active {
+  background-color: grey;
+}
+
+.status-item-circle {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+/*Phones*/
+@media (max-width: 767px) {
+  .status-bar {
+    right: 3%;
+  }
+
+  .status-item-description {
+    display: none;
+  }
+}
+//Tablets
+@media (min-width: 768px) and (max-width: 1281px) {
+  .status-bar {
+    right: 2.5%;
+  }
+
+  .status-item-description {
+    display: none;
+  }
+}
+/*Laptops*/
+@media (min-width: 1281px) {
+  .status-bar {
+    right: 0;
+    margin-right: 1vw;
+    transition: all 0.5s;
+    z-index: 10003;
+  }
+
+  .status-link:hover {
     .status-item-description {
-      display: inline;
-      animation-name: slide;
-      animation-duration: 0.2s;
-      animation-timing-function: ease-in-out;
+      z-index: 4;
+      visibility: visible;
+      opacity: 1;
+      right: 30px;
     }
     .status-item-circle {
       background-color: grey;
     }
   }
-}
-.status-item-circle {
-  list-style: none;
-  width: 15px;
-  height: 15px;
-  border: 1px solid grey;
-  border-radius: 15px;
-}
-.status-item-active {
-  background-color: grey;
-}
-.status-item-description {
-  display: none;
-  position: absolute;
-  right: 30px;
-  text-decoration: none;
-  width: 10vw;
-  background-color: $main-color;
-  color: #fff;
-  padding: 5px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-@keyframes slide {
-  from {
-    opacity: 0.3;
-    right: 50px;
-  }
-
-  to {
-    opacity: 1;
-    right: 30px;
-  }
-}
-/****************************************Media queries******************************************/
-
-@media (min-width: 768px) and (max-width: 979px) {
-}
-@media (max-width: 767px) {
   .status-item-circle {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border: 1px solid grey;
-    border-radius: 10px;
+    border-radius: 15px;
   }
-  .status-link {
-    &:hover {
-      .status-item-description {
-        display: none;
-      }
-    }
+  .status-item-active {
+    background-color: grey;
+  }
+  .status-item-description {
+    position: absolute;
+    right: 50px;
+    width: 10vw;
+    text-decoration: none;
+    background-color: $main-color;
+    color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0.3;
+    transition: all 0.2s;
   }
 }

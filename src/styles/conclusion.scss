@@ -1,0 +1,33 @@
+/**/
+.conclusion {
+  margin-top: 10px;
+  font-family: $fontFamily2;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    font-weight: bold;
+  }
+  ul {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+  img {
+    height: 60px;
+    width: auto;
+  }
+}
+@media (max-width: 767px) {
+  .conclusion {
+    img {
+      height: 40px;
+    }
+  }
+}

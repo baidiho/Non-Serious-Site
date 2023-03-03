@@ -1,35 +1,22 @@
+/* main container which contain all of the topic info*/
 .topic-container {
-  width: 100%;
-  max-width: 1500px;
-  margin: 25px 0;
-  padding: 70px;
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  padding-top: 84px;
   height: 70vh;
-  margin-bottom: 50px;
-}
-
-.topic-wrapper {
+  margin-top: 40px;
   display: flex;
-  margin: 0 auto;
-  padding: 15px 0px;
-  width: 60%;
-  height: 100%;
-}
-section:nth-child(odd) .topic-wrapper {
-  flex-direction: row-reverse;
-  .topic-description {
-    text-align: end;
-    margin-left: 5px;
-  }
 }
 
 .topic-description {
+  width: 50%;
   text-align: start;
   font-size: 1.8rem;
   line-height: 2rem;
-  margin: auto;
-  padding-top: 500px;
-  flex-basis: 60%;
-  margin-right: 5px;
+  margin: 0 auto;
+  padding: 0 5px;
+
   h1 {
     font-size: 1.8rem;
     line-height: 1.8rem;
@@ -37,56 +24,47 @@ section:nth-child(odd) .topic-wrapper {
   }
 }
 .topic-content {
-  flex-basis: 100%;
+  width: 50%;
+  height: 100%;
   position: relative;
   box-shadow: 5px 5px 5px rgb(48, 46, 46), -5px -5px 5px rgb(48, 46, 46);
-  flex-shrink: 1;
   background-color: grey;
 }
-.demonstration {
-  display: block;
-}
-.topic-content-hide {
-  display: flex;
+/*This is part that must disapear when clicked button  */
+
+.topic-content-facade {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../assets/trianglify-lowres.png") no-repeat;
-  background-size: cover;
+  display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 5;
-}
-.topic-demonstration-button {
-  padding: 2px 5px;
-  font-size: 1.5rem;
-  // line-height: 2rem;
-  height: auto;
-  
-  text-align: center;
-  border-width: 1px;
-  border-radius: 50px;
-
-  &:hover {
-    transition: background-color 1s, box-shadow 1s, border 1s, color 1s;
-    background-color: rgb(129, 122, 122);
-    box-shadow: 1px 1px 5px rgb(252, 250, 250);
-    border: 1px solid white;
-    color: white;
+  background: url("../assets/trianglify-lowres.png") no-repeat;
+  background-size: cover;
+  z-index: 2;
+  .topic-button {
+    font-size: 1.2rem;
+    padding: 2px 5px;
+    text-align: center;
+    border-width: 1px;
+    border-radius: 50px;
+    &:hover {
+      transition: background-color 1s, box-shadow 1s, border 1s, color 1s;
+      background-color: rgb(129, 122, 122);
+      box-shadow: 1px 1px 5px rgb(252, 250, 250);
+      border: 1px solid white;
+      color: white;
+    }
   }
 }
+/* animation of removing element*/
 
-.hiding {
+.facade-removing {
   animation-name: hide;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-.topic-description-animated {
-  padding-top: 0;
-  padding: 10px;
-  padding-bottom: 500px;
-  transition: padding-bottom 0.8s;
-}
+
 @keyframes hide {
   from {
     opacity: 1;
@@ -97,22 +75,38 @@ section:nth-child(odd) .topic-wrapper {
     z-index: 0;
   }
 }
-@media (min-width: 768px) {
-  // .topic-wrapper {
-  //   flex-direction: column;
-  // }
+
+/*Visible part of the topic/ Must be visible after clicking button*/
+.topic-content-visible {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
-@media (min-width: 481px) and (max-width: 767px) {
-  .topic-wrapper {
-    flex-direction: column !important;
+/*Responce design*/
+/*Tablets*/
+@media (max-width: 767px) {
+  .topic-container {
+    flex-direction: column;
+    padding: 40px 25px 25px;
+    margin: 0 auto;
   }
   .topic-description {
-    padding: 0;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .topic-content {
+    width: 100%;
   }
 }
 
-@media (max-width: 480px) {
-  .topic-wrapper {
-    flex-direction: column;
+/*Laptops*/
+@media (min-width: 768px) {
+  section:nth-child(odd) {
+    flex-direction: row-reverse;
+    .topic-description {
+      text-align: end;
+      margin-left: 5px;
+    }
   }
 }

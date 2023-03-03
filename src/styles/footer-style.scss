@@ -1,0 +1,25 @@
+footer {
+  width: 100%;
+  background-color: $main-color;
+  color: white;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .footer-text {
+    font-size: 1.1rem;
+    margin: 0 5px;
+  }
+}
+/*Tablets*/
+@media (max-width: 767px) {
+  .footer {
+    height: 40px;
+  }
+}
+/*Laptops*/
+@media (min-width: 768px) {
+  .footer {
+    height: 60px;
+  }
+}
