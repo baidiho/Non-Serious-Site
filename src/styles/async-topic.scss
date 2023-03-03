@@ -1,9 +1,19 @@
+.topic-content-async {
+  max-height: 100%;
+}
+.topic-async {
+  max-height: 80%;
+}
+.post-comments-container {
+  height: 91%;
+  overflow-y: scroll;
+}
 .post-working-window {
   height: 95%;
   margin: 0px;
 }
 .posts-container {
-  height: 90%;
+  height: 85%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow-y: scroll;
@@ -30,7 +40,6 @@
 }
 .page-button {
   width: 20px;
-  height: 20px;
   font-size: 1rem;
   text-align: center;
   background-color: white;
@@ -47,6 +56,4 @@
   &:hover {
     background-color: rgba(141, 119, 119, 0.295);
   }
-}
-.navigation-button {
 }
