@@ -1,12 +1,12 @@
 import { Post, Comments, PostControllerData, ViewRenderData } from "./types";
 
-import { PostController } from "./post-script";
+import { Request } from "./Request";
 
 export class PostView {
-  public controller: PostController;
+  public controller: Request;
   public this: Object;
   constructor() {
-    this.controller = new PostController();
+    this.controller = new Request();
     this.loadDataFromServer = this.loadDataFromServer.bind(this);
     this.renderMainPage = this.renderMainPage.bind(this);
     this.renderFunctionalButton = this.renderFunctionalButton.bind(this);
@@ -20,7 +20,7 @@ export class PostView {
 
   public renderData: ViewRenderData = {
     mainContainer: document.querySelector(".topic-content-async"),
-    numberOfPostsOnPerPage: 5,
+    numberOfPostsOnPerPage: 10,
     button: document.querySelector(".request"),
     lastPageClicked: 1,
   };
@@ -47,10 +47,10 @@ export class PostView {
     const button = document.createElement("button");
     if (typeOfPage == "main") {
       button.classList.add("navigation-button", "request");
-      button.textContent = "Load ";
+      button.textContent = "Load new posts";
     } else {
       button.classList.add("navigation-button", "back");
-      button.textContent = "Return";
+      button.textContent = "Back to posts";
     }
     container.appendChild(button);
     if (callback) {

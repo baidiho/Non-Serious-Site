@@ -1,4 +1,4 @@
-export class PostController {
+export class Request {
   public baseUrl = new URL("https://jsonplaceholder.typicode.com");
 
   async requestToServer(modifier: string) {

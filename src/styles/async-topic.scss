@@ -1,50 +1,67 @@
-.topic-content-async {
-  max-height: 100%;
-}
 .topic-async {
-  max-height: 80%;
+  background-color: aliceblue;
 }
 .post-comments-container {
-  height: 91%;
   overflow-y: scroll;
-}
-.post-working-window {
-  height: 95%;
-  margin: 0px;
+  margin: 2px;
+  height: 85%;
+
+  .post {
+    padding: 5px;
+    // margin: 0 5px;
+    margin-bottom: 5px;
+    pointer-events: none;
+  }
+  .comment {
+    margin: 0 5px;
+    padding: 5px;
+    border-bottom: 1px solid;
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
 }
 .posts-container {
   height: 85%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 5px;
   overflow-y: scroll;
-  border: 2px solid;
+  margin: 2px;
 }
 .post {
-  margin: 10px;
   padding: 5px;
   text-align: start;
   border: 1px solid;
+  transition: all 0.5s;
+
   h1 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
   p {
-    margin: 5px 0;
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
 .page-button-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10%;
+  height: 8%;
 }
 .page-button {
   width: 20px;
-  font-size: 1rem;
+  font-size: 15px;
   text-align: center;
   background-color: white;
   margin: 2px;
   transition: all 0.8s;
+  border: 1px solid;
   cursor: pointer;
   &:hover {
     background-color: gray;
@@ -53,7 +70,54 @@
 .page-button-active {
   color: white;
   background-color: black;
+  transition: all 0.2s;
   &:hover {
     background-color: rgba(141, 119, 119, 0.295);
+  }
+}
+.navigation-button {
+  margin: 5px 5px 0 5px;
+  padding: 2px;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 20px;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+}
+/*Phones*/
+@media (max-width: 767px) {
+  .topic-async {
+    max-height: 80%;
+  }
+  .post-comments-container {
+    height: 80%;
+  }
+
+  .page-button {
+    width: 12px;
+    font-size: 10px;
+  }
+  .posts-container {
+    height: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .post {
+    transition: all 0.5s;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(193, 206, 218);
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
   }
 }
