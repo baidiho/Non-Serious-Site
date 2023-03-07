@@ -42,7 +42,7 @@ module.exports = {
     port: 4200,
     hot: true,
   },
-  devtool: "source-map",
+ 
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
