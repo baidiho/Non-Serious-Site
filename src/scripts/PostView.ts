@@ -100,10 +100,9 @@ export class PostView {
   async loadComments(post: Post) {
     try {
       this.renderData.arraysOfComments = await this.controller.requestToServer(`/posts/${post.id}/comments`);
-      console.log(this.renderData.arraysOfComments.length);
+
     } catch (err) {
-      console.log("Error with load comments");
-      console.log(err);
+     
     }
   }
   async renderPostWithComments(post: Post, options: ViewRenderData) {

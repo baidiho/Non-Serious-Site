@@ -4,13 +4,13 @@
 .post-comments-container {
   overflow-y: scroll;
   margin: 2px;
-  height: 85%;
+  height: 90%;
 
   .post {
     padding: 5px;
-    // margin: 0 5px;
     margin-bottom: 5px;
     pointer-events: none;
+    height: 50%;
   }
   .comment {
     margin: 0 5px;
@@ -31,6 +31,7 @@
   height: 85%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 5px;
   overflow-y: scroll;
   margin: 2px;
@@ -76,8 +77,6 @@
   }
 }
 .navigation-button {
-  margin: 5px 5px 0 5px;
-  padding: 2px;
   background-color: #fafbfc;
   border: 1px solid rgba(27, 31, 35, 0.15);
   border-radius: 6px;
@@ -92,18 +91,22 @@
 /*Phones*/
 @media (max-width: 767px) {
   .topic-async {
-    max-height: 80%;
+    max-height: 72%;
   }
-  .post-comments-container {
-    height: 80%;
-  }
-
   .page-button {
     width: 12px;
     font-size: 10px;
   }
   .posts-container {
-    height: 80%;
+    height: 75%;
+  }
+  .post {
+    h1 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
   }
 }
 @media (min-width: 768px) {
@@ -119,5 +122,18 @@
     p {
       font-size: 1.4rem;
     }
+  }
+}
+@media (max-height: 700px) {
+  .post {
+    h1 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+  .posts-container {
+    height: 80%;
   }
 }

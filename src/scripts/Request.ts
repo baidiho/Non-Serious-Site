@@ -7,7 +7,6 @@ export class Request {
       let response = await request.json();
       return response;
     } catch (err) {
-      console.log("Error is throw");
       throw err;
     }
   }

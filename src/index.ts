@@ -11,4 +11,5 @@ import "./scripts/PostView";
 window.addEventListener("load", () => {
 	typewriter();
 	observer();
+	console.log('Welcome to DevTools. And close it right now!')
 });
