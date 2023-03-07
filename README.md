@@ -1,5 +1,5 @@
 # Non Serious Site description.
-This is the site where i have tried to train in coding and have fun. I hope you enjoy too. 
+This is the [site](https://heartfelt-crumble-94a423.netlify.app) where i have tried to train in coding and have fun. I hope you enjoy him too. 
 
 **Remark.** I am not designer and this is why sometimes this site ***can*** and ***look*** ugly. :sweat_smile:
 ## *Sites`s parts*
@@ -10,6 +10,9 @@ This is the site where i have tried to train in coding and have fun. I hope you 
 4. Async and HTTP.
 ## *Purposes*
 I had two purposes to make it. 
-*First* is to practice with different technologies(such as webpack, babel, SASS etc) and API`s (such as IntersectionObserver API). 
-*Second* to show that i know some basic features. 
-Hope, i have handled both.
+
+***First*** is to practice with different technologies(such as webpack, babel, SASS etc) and API`s (such as IntersectionObserver API). 
+
+***Second*** to show that i know some basic features. 
+
+Hope, i have handled both. :partying_face:
